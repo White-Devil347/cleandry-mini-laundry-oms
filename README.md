@@ -158,5 +158,4 @@ If extended:
 - Public GitHub repository is available
 - Live Render deployment is available
 
-Optional final polish:
-1. Add demo screenshots or Loom link to README for recruiter-friendly walkthrough
+
