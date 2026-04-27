@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CleanDry - Mini Laundry OMS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <section class="hero">
+        <div>
+          <p class="eyebrow">Mini Laundry OMS</p>
+          <h1>CleanDry Operations Console</h1>
+          <p class="subtitle">Create orders, move statuses, and track daily revenue in one screen.</p>
+        </div>
+        <div class="hero-pills">
+          <span>Live Billing</span>
+          <span>Status Tracking</span>
+          <span>Fast Search</span>
+        </div>
+      </section>
+
+      <section class="card card-accent reveal">
+        <h2>Create Order</h2>
+        <form id="orderForm">
+          <div class="grid customer-grid">
+            <input id="customerName" placeholder="Customer Name" required />
+            <input id="phoneNumber" placeholder="Phone Number (10 digits)" required />
+          </div>
+
+          <div class="items-head">
+            <h3>Garments</h3>
+            <button id="addItemBtn" type="button" class="secondary">+ Add Item</button>
+          </div>
+
+          <div id="itemsContainer" class="items-container"></div>
+
+          <div class="bill-preview">
+            <p class="bill-label">Estimated Bill</p>
+            <p id="billAmount" class="bill-value">INR 0</p>
+          </div>
+
+          <button type="submit">Create Order</button>
+        </form>
+        <div id="createResult" class="confirmation-panel">Fill details and create an order.</div>
+      </section>
+
+      <section class="card reveal">
+        <h2>Filters</h2>
+        <div class="grid filters-grid">
+          <select id="statusFilter">
+            <option value="">All Status</option>
+            <option value="RECEIVED">RECEIVED</option>
+            <option value="PROCESSING">PROCESSING</option>
+            <option value="READY">READY</option>
+            <option value="DELIVERED">DELIVERED</option>
+          </select>
+          <input id="searchFilter" placeholder="Search by name or phone" />
+          <select id="sortFilter">
+            <option value="newest">Newest First</option>
+            <option value="oldest">Oldest First</option>
+            <option value="amountHigh">Amount High to Low</option>
+            <option value="amountLow">Amount Low to High</option>
+          </select>
+          <button id="loadOrders" type="button">Load Orders</button>
+          <button id="clearFilters" type="button" class="secondary">Clear Filters</button>
+        </div>
+        <div class="quick-statuses" id="quickStatuses">
+          <button type="button" class="secondary quick-status" data-status="RECEIVED">Received</button>
+          <button type="button" class="secondary quick-status" data-status="PROCESSING">Processing</button>
+          <button type="button" class="secondary quick-status" data-status="READY">Ready</button>
+          <button type="button" class="secondary quick-status" data-status="DELIVERED">Delivered</button>
+        </div>
+        <p id="activeFilters" class="active-filters">No active filters</p>
+      </section>
+
+      <section class="card reveal">
+        <h2>Dashboard</h2>
+        <div id="dashboardCards" class="stats-grid"></div>
+        <div id="statusBreakdown" class="status-breakdown"></div>
+      </section>
+
+      <section class="card reveal">
+        <div class="orders-head">
+          <h2>Orders</h2>
+          <span id="ordersMeta" class="meta-pill">0 shown</span>
+        </div>
+        <div id="ordersOutput" class="orders-grid"></div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
