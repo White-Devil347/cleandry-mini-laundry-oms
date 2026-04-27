@@ -18,6 +18,10 @@ App URLs:
 - UI: http://localhost:3000
 - API base: http://localhost:3000/api
 
+Live Deployment URLs:
+- Live App: https://cleandry-mini-laundry-oms.onrender.com/
+- Live Health: https://cleandry-mini-laundry-oms.onrender.com/api/health
+
 ### Environment Variables
 Copy [.env.example](.env.example) to `.env` and adjust if needed.
 
@@ -82,6 +86,7 @@ Versioned aliases are also available:
 ## Demo Artifacts
 - Postman collection: [postman/CleanDry.postman_collection.json](postman/CleanDry.postman_collection.json)
 - Browser demo UI at `/`
+- Live deployed app: https://cleandry-mini-laundry-oms.onrender.com/
 
 ## Production-Ready Notes
 
@@ -150,8 +155,8 @@ If extended:
 - AI usage report and sample prompts are included
 - Postman collection is included
 - Docker + Render deployment configs are included
+- Public GitHub repository is available
+- Live Render deployment is available
 
-Before final submission, complete these manual steps:
-1. Push this code to a public GitHub repository
-2. Deploy and share live app URL (Render recommended)
-3. Add demo screenshots or Loom link to README (optional but strong)
+Optional final polish:
+1. Add demo screenshots or Loom link to README for recruiter-friendly walkthrough
